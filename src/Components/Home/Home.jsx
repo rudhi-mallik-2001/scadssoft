@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
+import About from '../About/About'
 
 const Boxcont = styled(Box)`
     width: 98.vw;

@@ -12,14 +12,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
-const pages = ['Products', 'Carrer','Industries','About Us'];
-const settings = [ 'Logout'];
+import { useNavigate } from 'react-router';
+const pages = ['Home', 'Products', 'Career', 'Industries', 'About Us'];
+const settings = ['Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const Navigation = useNavigate();
+  function HandleNavigate (text)  {
+      Navigation(`/${text.replace(/\s/g, "").toLowerCase()}`);
+  };
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -27,17 +30,17 @@ function Navbar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (text) => {
     setAnchorElNav(null);
   };
-
+  
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" style={{backgroundColor:'#192537'}}>
+      <Container maxWidth="xl" style={{ backgroundColor: '#192537' }}>
         <Toolbar disableGutters >
           <Typography
             variant="h6"
@@ -54,7 +57,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'}/>
+            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -88,7 +91,10 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" onClick={()=>
+                    HandleNavigate(page.toLowerCase())
+                  }
+                    style={{ textTransform: 'none' }}>{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -109,14 +115,16 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'}/>
+            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>{handleCloseNavMenu();
+                  HandleNavigate(page)}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{ textTransform: 'none' }}
               >
                 {page}
               </Button>
