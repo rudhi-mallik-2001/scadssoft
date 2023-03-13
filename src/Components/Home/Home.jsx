@@ -18,9 +18,9 @@ const Boxcont = styled(Box)`
 const Home = () => {
     return (
         <Boxcont>
-            <Typography variant='h3' style={{color:'white',fontSize:'58px',marginBottom:'8px'}}>Scadssoft</Typography>
-            <Typography variant='h5' style={{color:'white',fontSize:'24px',marginBottom:'8px'}}>Start Contributing</Typography>
-            <Button variant='contained' style={{color:'white',fontSize:'14px',backgroundColor:'#B09E80'}}>Book now</Button>
+            <Typography variant='h3' style={{color:'white',fontSize:'58px',marginBottom:'8px',fontFamily:'monospace'}}>Scadssoft</Typography>
+            <Typography variant='h5' style={{color:'white',fontSize:'24px',marginBottom:'8px',fontFamily:'monospace'}}>Start Contributing</Typography>
+            <Button variant='contained' style={{color:'white',fontSize:'14px',backgroundColor:'#B09E80',fontFamily:'monospace'}}>Book now</Button>
         </Boxcont>
     )
 }

@@ -4,6 +4,7 @@ import React from 'react'
 import About from './About/About'
 import Footer from './Footer/Footer'
 import Home from './Home/Home'
+import Newshalter from './Newshalter/Newshalter'
 const Componentcont=styled(Box)`
 width:100%;
 `
@@ -12,6 +13,7 @@ const Component = () => {
     <Box>
         <Home/>
         <About/>
+        <Newshalter/>
     </Box>
   )
 }

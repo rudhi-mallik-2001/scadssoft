@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router';
-const pages = ['Home', 'Products', 'Career', 'Industries', 'About Us'];
+const pages = ['Home', 'Products', 'Industries', 'About Us'];
 const settings = ['Logout'];
 
 function Navbar() {
@@ -40,7 +40,7 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl" style={{ backgroundColor: '#192537' }}>
+      <Container maxWidth="xl" style={{ backgroundColor: '#192537',fontFamily:'monospace' }}>
         <Toolbar disableGutters >
           <Typography
             variant="h6"
@@ -57,7 +57,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'} />
+            <img src='/thumbnail.jpeg' width={'auto'} height={'30px'} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -115,7 +115,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            <img src='./thumbnail.jpeg' width={'auto'} height={'30px'} />
+            <img src='/thumbnail.jpeg' width={'auto'} height={'30px'} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -132,33 +132,15 @@ function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Button
+                
+                onClick={()=>{handleCloseNavMenu();
+                  HandleNavigate('contact')}}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{ textTransform: 'none' }}
+              >
+                Contact Us
+              </Button>
           </Box>
         </Toolbar>
       </Container>
