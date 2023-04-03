@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react'
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { Service } from '../Data'
 const DetailsCont = styled(Box)`
 width:100%;
@@ -33,7 +33,10 @@ const ContentBox = styled(Box)`
 `
 const ServicesDetails = () => {
     const { id } = useParams();
-    console.log(id)
+    const Navigation = useNavigate();
+    function HandleProductDetails (idx)  {
+        Navigation(`contact/${idx}`);
+    };    
     return (
         <DetailsCont>
             <Headingcont style={{ justifyContent: 'center' }}>
@@ -52,6 +55,7 @@ const ServicesDetails = () => {
             </ContentBox>
             <Headingcont style={{ justifyContent: 'flex-end' }}>
                 <Button variant='contained'
+                onClick={()=>HandleProductDetails(id)}
                     style={{ fontSize: '12px', fontWeight: '700', padding: '5px 15px', borderRadius: '16px' }}>Book a Demo</Button>
             </Headingcont>
         </DetailsCont>

@@ -8,6 +8,9 @@ height:100vh;
 background-color:#192537;
 display:flex;
 position:relative;
+@media (max-width: 786px) {
+    height:150vh;
+}
 `
 const ContentCont = styled(Box)`
 position:absolute;
@@ -30,6 +33,9 @@ border-radius:18px;
     height:50%;
     top:25%;
     left:15%;
+}
+@media (max-width: 786px) {
+    height:auto;
 }
 `
 const ImgCont = styled(Box)`
@@ -75,7 +81,7 @@ const About = () => {
                     <Typography variant='subtitle'>
                         We scadssoft/alpine digits is an business solution organization that is
                         willing to give almost every solution what customer need in order to
-                        achieve their prespective.
+                        achieve their prespective.Our Digital & IT experts assure that your business reputation remains intact as your growth marks our success.
                     </Typography>
                 </Box>
             </ContentCont>
