@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router';
-const pages = ['Home', 'Products', 'Industries', 'About Us'];
+const pages = ['Home', 'Products',"Services", 'Industries', 'About Us'];
 const settings = ['Logout'];
 
 function Navbar() {

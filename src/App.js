@@ -9,6 +9,9 @@ import Career from './Components/Career/Career';
 import About from './Components/About/AboutUs';
 import Industries from './Components/Industries/Industries';
 import Contact from './Components/Contact/Contact';
+import ProductDetails from './Components/Products/ProductDetails';
+import Service from './Components/Service/Service';
+import ServicesDetails from './Components/Service/ServicesDetails';
 
 function App() {
   return (
@@ -23,11 +26,13 @@ function App() {
           <Route path={'/aboutus'} element={<About />} />
           <Route path={'/industries'} element={<Industries />} />
           <Route path={'/contact'} element={<Contact />} />
+          <Route path={'/services'} element={<Service />} />
+          <Route path={'/products/details/:id'} element={<ProductDetails />} />
+          <Route path={'/services/details/:id'} element={<ServicesDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>
     </>
   );
 }
-
 export default App;

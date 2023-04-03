@@ -17,14 +17,10 @@ const ProductCont = styled(Box)`
     gap:10px;
 `
 const Product = [
-  { id:0 ,image: 'Production Management.jpg', name: 'Production Management' },
-  { id:1 ,image: 'Ware House Management.png', name: 'Ware House Management' },
-  { id:2 ,image: 'HR management.jpg', name: 'HR management' },
-  { id:3 ,image: 'Sales & Marketing Management.jpg', name: 'Sales & Marketing Management' },
-  { id:4 ,image: 'Finance Management.jpg', name: 'Purchase Management' },
-  // { id:5 ,image: 'Work Place Management.jpeg', name: 'Work Place Management' },
-  // { id:6 ,image: 'Hospitality services.webp', name: 'Hospitality services' },
-  // { id:7 ,image: 'Tracking of product management.jpeg', name: 'Tracking of product management' }
+  { id:0 ,image: 'Application-Maintenance-Services-1.png', name: 'Application services' },
+  { id:1 ,image: 'cloud1.jpg', name: 'Cloud' },
+  { id:2 ,image: 'hand-holding-wooden-puzzle-word-260nw-1098145733.webp', name: 'Enterprises solutions' },
+  { id:3 ,image: '1661703184986.jpg', name: 'Digital Marketing' },
 ];
 const Cards=styled(Card)`
 min-width:345;
@@ -32,7 +28,7 @@ max-width:345;
 width:300px;
 height:auto;
 `
-const Products = () => {
+const Service = () => {
   const Navigation = useNavigate();
   function HandleProductDetails (id)  {
     Navigation(`details/${id}`);
@@ -49,7 +45,7 @@ const Products = () => {
                   component="img"
                   height="190"
                   width="150"
-                  image={`/Products/${val.image}`}
+                  image={`/Service/${val.image}`}
                   alt="green iguana"
                   style={{objectFit:'fill'}}
                 />
@@ -72,4 +68,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Service
