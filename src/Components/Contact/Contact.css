@@ -1,0 +1,27 @@
+.form{
+    width: 60%;
+}
+.inputCont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+.inputCont input,textarea{
+    width: 100%;
+    height: 35px;
+}
+.inputCont p{
+    font-size: 20px;
+}
+@media screen and (max-width: 768px){
+    .form{
+        width: 90%;
+    }
+}
+textarea:focus, input:focus{
+    outline: none;
+}

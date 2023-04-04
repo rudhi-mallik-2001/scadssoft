@@ -26,7 +26,7 @@ function App() {
           <Route path={'/aboutus'} element={<About />} />
           <Route path={'/industries'} element={<Industries />} />
           <Route path={'/contact'} element={<Contact />} />
-          <Route path={'/contact:idx'} element={<Contact />} />
+          <Route path={'/contact/:idx/:name'} element={<Contact />} />
           <Route path={'/services'} element={<Service />} />
           <Route path={'/products/details/:id'} element={<ProductDetails />} />
           <Route path={'/services/details/:id'} element={<ServicesDetails />} />
@@ -36,4 +36,10 @@ function App() {
     </>
   );
 }
+
+
+
+
+
+
 export default App;

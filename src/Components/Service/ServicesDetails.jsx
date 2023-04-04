@@ -34,8 +34,10 @@ const ContentBox = styled(Box)`
 const ServicesDetails = () => {
     const { id } = useParams();
     const Navigation = useNavigate();
-    function HandleProductDetails (idx)  {
-        Navigation(`contact/${idx}`);
+    function HandleProductDetails (idx,name)  {
+        let temp=name;
+        temp=temp.replace(/\s+/g, '-').toLowerCase();
+        Navigation(`../contact/${idx}/${temp}`);
     };    
     return (
         <DetailsCont>
@@ -55,7 +57,7 @@ const ServicesDetails = () => {
             </ContentBox>
             <Headingcont style={{ justifyContent: 'flex-end' }}>
                 <Button variant='contained'
-                onClick={()=>HandleProductDetails(id)}
+                onClick={()=>HandleProductDetails(id,Service[id]['name'])}
                     style={{ fontSize: '12px', fontWeight: '700', padding: '5px 15px', borderRadius: '16px' }}>Book a Demo</Button>
             </Headingcont>
         </DetailsCont>

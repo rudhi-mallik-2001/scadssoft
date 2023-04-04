@@ -98,7 +98,7 @@ export const Service=[
         id:'2',
         name: 'Cloud',
         content: `Your company has a unique purpose and new achievements
-        journey. That&#39;s why you need a cloud strategy to take advantage
+        journey. That's why you need a cloud strategy to take advantage
         of breakthrough technologies, scale rapidly, and seize emerging
         opportunities. We can help you drive business value, advance
         your goals of transformation, and innovation for a reimagined
